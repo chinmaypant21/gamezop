@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The Assignment:
+Your task is to develop a responsive website inspired by https://www.gamezop.com. While this assignment draws inspiration from Gamezop, we encourage you to bring your unique creative vision to the table. The objective is not to replicate the website but to craft an innovative and original interpretation based on your expertise in front-end software engineering.
+To assist you in this assignment, we provide you with the following API: "https://pub.gamezop.com/v3/games?id=peSLSV". This API gives you a list of games that you can utilize in your application.
 
-## Getting Started
+Technical Requirements:
+The project should be built using Next.js and TypeScript.
+Incorporate Progressive Web App (PWA) functionality into your application.
+Your app should have a well-structured directory and exhibit features demonstrating best industry practices.
+You are expected to leverage React Suspense for handling asynchronous operations, including data fetching.
+Implement Server Components to efficiently render components server-side and send them to the client.
 
-First, run the development server:
+Non-Technical Requirements:
+You don't need to incorporate every element of the original website in your version. For example, advertisements do not need to be rendered.
+The final output should be a responsive website, ensuring a seamless user experience across various devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Deployment and Submission:
+Upload your final project to a public GitHub repository. The repository should be well-organized and include a README file that articulates your development process, your decision-making journey, and instructions on how to run the project locally.
+Deploy the website using Vercel. The link to the live website should be included in your submission.

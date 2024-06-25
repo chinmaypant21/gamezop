@@ -13,6 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        gzp: {
+          main : 'var(--gzp-main-color)',
+          sec : 'var(--gzp-sec-color)',
+        },
+      },
+      borderColor: {
+        primary: 'var(--gzp-sec-color)'
+      }
     },
   },
   plugins: [],
