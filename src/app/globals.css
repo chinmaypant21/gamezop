@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind components;
+/* @tailwind components; */
 @tailwind utilities;
 
 :root {
@@ -9,6 +9,7 @@
   --gzp-main-color: #222341;
   --gzp-sec-color: #404380;
   --gzp-bg-color: #191a32;
+  --gzp-text-color: #ffffff;
   
 }
 
@@ -36,3 +37,19 @@ body {
     text-wrap: balance;
   }
 } */
+
+.favourite-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* right: 0; */
+  z-index: 2;
+}
+
+.favourite-img{
+  transition: all 0.2s ease;
+}
+
+.favourite-img:hover{
+  scale: 1.2;
+}
