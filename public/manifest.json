@@ -1,0 +1,23 @@
+{
+    "name": "Gamezop Web App",
+    "short_name": "Gamezop",
+    "description": "",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "purpose": "maskable",
+            "sizes": "512x512",
+            "src": "icons/icon512_maskable.png",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "icons/icon512_rounded.png",
+            "type": "image/png"
+        }
+    ]
+}
