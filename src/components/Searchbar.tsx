@@ -20,15 +20,15 @@ export default function Searchbar({ gameData }: any) {
 
     function handleBlur(e: any){
         if (!e.currentTarget.contains(e.relatedTarget)) {
-            // setValue('');
-            // setIsOpen(false);
+            setValue('');
+            setIsOpen(false);
         }
     }
 
     function handleClearInput(e: any){
         e.stopPropagation();
-        // setValue('');
-        // setIsOpen(false);
+        setValue('');
+        setIsOpen(false);
     }
 
     useEffect(() => {
