@@ -1,36 +1,12 @@
-"use client"
-
-import { useParams } from 'next/navigation';
-import NavItem from './NavItem';
-import '@/assets/header.css'
 import Link from 'next/link';
 import Image from 'next/image';
+import Searchbar from './Searchbar';
 
-const categories = [
-  {
-    name: 'Action',
-    id: 'action-games'
-  },
-  {
-    name: 'Adventure',
-    id: 'adventure-games'
-  },
-  {
-    name: 'Arcade',
-    id: 'arcade-games'
-  },
-  {
-    name: 'Puzzle & Logic',
-    id: 'puzle-and-logic-games'
-  },
-  {
-    name: 'Strategy',
-    id: 'strategy-games'
-  }
-]
+import '@/assets/header.css'
+import NavCategory from './NavCategory';
+import { SearchGames } from './SearchGames';
 
 export default function Navbar() {
-  const { category: selected_category } = useParams();
 
   return (
     <header className='text-primary' id='header'>
@@ -44,17 +20,8 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <ul id='category_container'>
-          {
-            categories.map((category: any) => (
-              <NavItem
-                key={category.id}
-                category={category}
-                isActive={category.id === selected_category} 
-              />
-            ))
-          }
-        </ul>
+        <NavCategory />
+        <SearchGames />
       </div>
     </header>
   );

@@ -9,12 +9,15 @@
   --app-main-color: #222341;
   --app-sec-color: #404380;
   /* --app-sec-color-fade:  */
+  --app-search-bg-color: #1e2333;
   --app-bg-color: #191a32;
   --app-bg-sec-color: #26284c;
+  --app-input-bg-color: #151823;
   --app-text-color: #ffffff;
   --app-text-sec-color: #000000;
   --app-nav-link-color: #151823;
   --app-nav-active-color: #ffcc5b;
+  --app-border-main-color: #3e51b5;
   
 }
 
@@ -86,4 +89,13 @@ body {
 
 .favourite-btn:hover{
   scale: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
 }

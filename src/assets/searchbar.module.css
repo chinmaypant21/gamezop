@@ -1,0 +1,67 @@
+.search_icon_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--app-border-main-color);
+    height: 35px;
+    aspect-ratio: 1;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+
+.search_input_container{
+    display: flex;
+    box-sizing: content-box;
+    background-color: var(--app-input-bg-color);
+    border: 1px solid var(--app-border-main-color);
+    padding: 0px 8px 0px 15px;
+    border-radius: 50px;
+    width: 250px;
+    height: 40px;
+
+}
+
+.input{
+    flex-grow: 1;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    font-size: 0.9m;
+    /* width: 50px; */
+}
+
+.clear_input_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.result_game_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.search_result_menu{
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    min-width: 350px;
+    padding-block: 10px;
+    max-height: 450px;
+    overflow-y: auto;
+    background-color: var(--app-search-bg-color);
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.search_list_item{
+    padding-inline: 10px;
+    padding-block: 8px;
+    width: 100%;
+}
+
+.search_list_item:hover{
+    background-color: var(--app-sec-color);
+}
