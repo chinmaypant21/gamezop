@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import GameSection from "./GameSection";
-import Container from "./container";
+import Container from '@/components/Container'
 import styles from '@/assets/page.module.css'
 
 export default async function Home() {

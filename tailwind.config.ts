@@ -14,16 +14,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       textColor: {
-        primary: 'var(--gzp-text-color)'
+        primary: 'var(--app-text-color)'
       },
       colors: {
         gzp: {
-          main : 'var(--gzp-main-color)',
-          sec : 'var(--gzp-sec-color)',
+          main : 'var(--app-main-color)',
+          sec : 'var(--app-sec-color)',
         },
       },
       borderColor: {
-        primary: 'var(--gzp-sec-color)'
+        primary: 'var(--app-sec-color)'
       }
     },
   },
