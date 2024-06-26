@@ -3,7 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function SearchGameList({ data }: any) {
-    return (
+    if(!data.length) {
+        return (
+            <div className='flex justify-center items-center h-20 text-sm text-dim'>No search results</div>
+        )
+    }
+
+    else return (
         <ul className={styles.result_game_list}>
             {
                 data.map((game: any) => (

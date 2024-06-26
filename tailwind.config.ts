@@ -14,7 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       textColor: {
-        primary: 'var(--app-text-color)'
+        primary: 'var(--app-text-color)',
+        dim: 'var(--app-text-dim-color)'
       },
       colors: {
         gzp: {
