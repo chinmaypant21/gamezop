@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --app-main-color: #222341;
   --app-sec-color: #404380;
+  /* --app-sec-color-fade:  */
   --app-bg-color: #191a32;
   --app-bg-sec-color: #26284c;
   --app-text-color: #ffffff;
@@ -36,17 +37,55 @@ body {
   }
 } */
 
-.favourite-btn{
+:is(.favourite-btn, .info-container){
+  transition: all 0.2s ease;
+  /* z-index: 2; */
   position: absolute;
+}
+
+.favourite-btn{
   top: 10px;
   right: 10px;
-  z-index: 2;
 }
 
-.favourite-img{
-  transition: all 0.2s ease;
+.info-container{
+  bottom: 40px;
+  right: 10px;
 }
 
-.favourite-img:hover{
+.info-btn{
+}
+
+.xyz{
+  position: absolute;
+  right: 0;
+  background-color: color-mix(in srgb, var(--app-sec-color) 80%, transparent);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  width: max-content;
+  max-width: 300px;
+  color: var(--app-text-color);
+  box-shadow: 0 2px 13px rgba(0,0,0,.095);
+  display: none;
+  z-index: 20;
+  top: 100%;
+}
+
+.info_heading{
+  font-weight: 600;
+}
+
+.info_description{
+  font-size: 0.8em;
+  padding-block: 0.3em;
+}
+
+.info-container:hover .xyz{
+  display: block;
+}
+
+:is(.favourite-btn, .info-btn):hover{
   scale: 1.2;
 }
