@@ -1,11 +1,13 @@
-import { fetchGames } from "@/lib/api/fetchGames";
-import Searchbar from "./Input/SearchInput";
+import { fetchGames } from "@/lib/api";
+
+// Styles
+import SearchInput from "./Input/SearchInput";
 
 export default async function SearchBar() {
     console.log('[+] Fetch in search')
     const games = await fetchGames();
 
     return (
-        <Searchbar gameData={games} />
+        <SearchInput gameData={games} />
     )
 }

@@ -4,10 +4,13 @@ import { useMemo } from "react";
 import { useParams } from "next/navigation";
 
 import { categories } from "@/data/categories";
-import Container from "./Container"
-import GameSection from "./GameSection";
+import Container from "@/components/Container/Container";
+import GameCard from "@/components/Cards/GameCard/GameCard";
 
-export default function CategoryClient({ games }: any) {
+import styles from '@/assets/game.module.css';
+
+
+export default function CategoryGames({ games }: any) {
     const { category } = useParams();
 
     const selected_category = useMemo(() => categories.find((cat) => (
@@ -24,7 +27,16 @@ export default function CategoryClient({ games }: any) {
     return (
         <Container className='flex flex-col gap-3'>
             <div className="text-2xl text-primary capitalize font-bold">{selected_category?.name}</div>
-            <GameSection games={filteredGames} />
+            <div className={styles.gameContainer}>
+                {
+                    filteredGames ?
+                        games.map((game: any) => (
+                            <GameCard key={game.code} data={game} />
+                        ))
+
+                        : <div>Loading</div>
+                }
+            </div>
         </Container>
     )
 }

@@ -1,15 +1,17 @@
 'use client'
 
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { Fragment,  useEffect,  useRef, useState } from "react"
 import Image from "next/image";
 import useDebounce from "@/hooks/useDebounce";
 import SearchGameList from "./SearchGameList";
+
+// Styles
 import styles from './SearchInput.module.css'
 
 const MAX_RESULTS = 25;
 
 const filterData = (value: any, gameData: any, setFilteredData: any) => {
-    console.log('filtered')
+    console.log('** Filtered data')
 
     const filtered = gameData.filter((game: any) => {
         const query = value.toLowerCase();
@@ -62,7 +64,7 @@ export default function SearchInput({ gameData }: any) {
             setFilteredData(null);
             return;
         }
-        console.log('isCalled')
+
         debouncedFilter(value, gameData, setFilteredData);
     }, [value])
 
