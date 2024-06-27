@@ -24,10 +24,11 @@ export default function GameSwiper({ games }: Props) {
                 loop
             >
             {
-
                 games.slice(0, 20).map(game => (
-                    <SwiperSlide key={game.code} className={styles.game_container}>
-                        <GameCard data={game} />
+                    <SwiperSlide key={game.code} className={styles.card_wrapper}>
+                        {/* <div className={styles.card_wrapper}> */}
+                            <GameCard data={game} />
+                        {/* </div> */}
                     </SwiperSlide>
                 ))
             }
