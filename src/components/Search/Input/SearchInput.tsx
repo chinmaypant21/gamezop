@@ -3,12 +3,12 @@
 import { Fragment,  MouseEvent,  useEffect,  useRef, useState } from "react"
 import Image from "next/image";
 import useDebounce from "@/hooks/useDebounce";
-import SearchGameList from "./SearchGameList";
+import SearchGameList from "../Dropdown/SearchGameList";
 
 import CrossIcon from '@icons/cross.svg'
 import SearchIcon from '@icons/search.png'
 
-import styles from './SearchInput.module.css'
+import styles from '../Search.module.css'
 
 const MAX_RESULTS = 25;
 

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import RatingIcon from '@icons/star.png'
-import styles from './SearchInput.module.css'
+import styles from '../Search.module.css'
 
 interface Props {
     data: Game[]
