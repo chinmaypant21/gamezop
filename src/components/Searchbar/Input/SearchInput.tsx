@@ -5,7 +5,9 @@ import Image from "next/image";
 import useDebounce from "@/hooks/useDebounce";
 import SearchGameList from "./SearchGameList";
 
-// Styles
+import CrossIcon from '@icons/cross.svg'
+import SearchIcon from '@icons/search.png'
+
 import styles from './SearchInput.module.css'
 
 const MAX_RESULTS = 25;
@@ -97,7 +99,7 @@ export default function SearchInput({ gameData }: any) {
                             className={styles.clear_input_btn}
                         >
                             <Image 
-                                src='https://static.gamezop.com/comet/assets/img/cross.svg'
+                                src={CrossIcon}
                                 height='25' width='25' 
                                 alt='Close'
                             />
@@ -113,7 +115,7 @@ export default function SearchInput({ gameData }: any) {
                 </Fragment>
             )
             : <div className={styles.search_icon_container}>
-                <Image src={'/search.png'} width={20} height={20} alt="Search" />
+                <Image src={SearchIcon} width={20} height={20} alt="Search" />
             </div>
         }
 

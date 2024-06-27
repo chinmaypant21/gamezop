@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './SearchInput.module.css'
 
+import RatingIcon from '@icons/star.png'
+
 export default function SearchGameList({ data }: any) {
     if(!data.length) {
         return (
@@ -21,7 +23,7 @@ export default function SearchGameList({ data }: any) {
                                 <span className='text-xs'>{game.categories.en[0] ? `in ${game.categories.en[0]}` : ''}</span>
                             </div>
                             <div className='flex flex-col gap-1 justify-center items-center ml-auto mr-2'>
-                                <Image src={'/star.png'} alt='Rating' height={25} width={25} />
+                                <Image src={RatingIcon} alt='Rating' height={25} width={25} />
                                 <span className='text-xs'>{game.rating}/5</span>
                             </div>
                         </Link>

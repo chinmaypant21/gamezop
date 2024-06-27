@@ -1,8 +1,12 @@
 import nextPWA from "next-pwa";
+import path from 'path';
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const withPWA = nextPWA({
     dest: "public",
-    disable: true,
+    // disable: true,
     // disable: process.env.NODE_ENV === "development",
     register: true,
     skipWaiting: true,
@@ -19,6 +23,10 @@ const nextConfig = {
                 hostname: 'static.gamezop.com',
             }
         ]
+    },
+    webpack: (config) => {
+        config.resolve.alias['@icons'] = path.join(__dirname, 'src/assets/images/icons')
+        return config;
     }
 };
 

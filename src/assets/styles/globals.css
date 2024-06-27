@@ -41,6 +41,12 @@ body {
   }
 } */
 
+.page-wrapper{
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+}
+
 .favourite-btn{
   position: absolute;
   top: 10px;

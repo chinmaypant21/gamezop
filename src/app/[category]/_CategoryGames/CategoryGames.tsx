@@ -1,13 +1,14 @@
 'use client'
 
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { redirect, useParams } from "next/navigation";
 
 import { categories } from "@/data/categories";
 import Container from "@/components/Container/Container";
 import GameCard from "@/components/Cards/GameCard/GameCard";
 
-import styles from '@/assets/game.module.css';
+// Styles
+import styles from './Games.module.css';
 
 
 export default function CategoryGames({ games }: any) {

@@ -1,5 +1,5 @@
 import CategoryGames from './_CategoryGames/CategoryGames';
-import styles from '@/assets/page.module.css'
+import styles from './/page.module.css'
 
 export default async function CategoryPage() {
     console.log('[+] Fetched in Category Page')
@@ -9,7 +9,7 @@ export default async function CategoryPage() {
     const { games } = await response.json();
 
     return (
-        <main className={`flex flex-col items-center justify-between py-4 ${styles.page_wrapper}`}>
+        <main className={`flex flex-col items-center justify-between py-4 page-wrapper`}>
             <CategoryGames games={games} />
         </main>
     );

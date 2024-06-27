@@ -1,16 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import FavIcon from '@icons/favourite_grey.svg'
+import FavSelectIcon from '@icons/favourite_red.svg'
+import InfoIcon from '@icons/info_icon.png'
+
 export default function GameCard({ data }: any) {
     return (
         <div className="relative">
             <button aria-label="Favourite" className="favourite-btn">
-                <Image src={'/icons/favourite_grey.svg'} alt="Favourite" height={30} width={30} className="favourite-img" />
-                {/* <Image src={'/icons/favourite_red.svg'} alt="__" height={30} width={30} /> */}
+                <Image src={FavIcon} alt="Favourite" height={30} width={30} className="favourite-img" />
+                {/* <Image src={'/icons/favourite_red.svg'} alt="Favourite Selected" height={30} width={30} /> */}
             </button>
             <div className="info-container">
                 <button aria-label="Info" className="info-btn">
-                    <Image src={'/icons/icon.png'} alt="Info Icon" height={30} width={30} className="info-img" />
+                    <Image src={InfoIcon} alt="Info Icon" height={30} width={30} className="info-img" />
                 </button>
 
                 <div className="xyz">
@@ -28,7 +32,7 @@ export default function GameCard({ data }: any) {
                 </div>
             </div>
             <Link target="_blank" href={data.url}>
-                <Image alt="__" src={data.assets.square} height={190} width={190} className="rounded-2xl w-full" />
+                <Image alt="Game Image" src={data.assets.square} height={190} width={190} className="rounded-2xl w-full" />
                 <h3 className="text-primary font-bold text-lg text-center pt-2">{data.name.en}</h3>
                 {/* overflow-hidden text-ellipsis whitespace-nowrap w-[50px] */}
             </Link>
