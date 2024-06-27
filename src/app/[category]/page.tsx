@@ -1,6 +1,4 @@
 import CategoryGames from './_CategoryGames/CategoryGames';
-
-// Styles
 import styles from '@/assets/page.module.css'
 
 export default async function CategoryPage() {

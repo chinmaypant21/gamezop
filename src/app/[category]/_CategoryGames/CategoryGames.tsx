@@ -1,7 +1,7 @@
 'use client'
 
-import { useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { redirect, useParams } from "next/navigation";
 
 import { categories } from "@/data/categories";
 import Container from "@/components/Container/Container";
@@ -12,21 +12,31 @@ import styles from '@/assets/game.module.css';
 
 export default function CategoryGames({ games }: any) {
     const { category } = useParams();
+    const [selectedCategory, setSelectedCategory] = useState<any>();
 
-    const selected_category = useMemo(() => categories.find((cat) => (
-        cat.id === category
-    )), [category])
+    useEffect(() => {
+        const selected = categories.find((cat) => cat.id === category);
+
+        if(!selected){
+            redirect('/')
+        }
+
+        else{
+            setSelectedCategory(selected)
+        }
+    },[category])
+
 
     const filteredGames = useMemo(() => (
         games.filter((game: any) => (
-            game.categories.en.includes(selected_category?.value) ||
-            game.tags.en.includes(selected_category?.value))
+            game.categories.en.includes(selectedCategory?.value) ||
+            game.tags.en.includes(selectedCategory?.value))
         )
     ), [games]);
 
     return (
         <Container className='flex flex-col gap-3'>
-            <div className="text-2xl text-primary capitalize font-bold">{selected_category?.name}</div>
+            <div className="text-2xl text-primary capitalize font-bold">{selectedCategory?.name}</div>
             <div className={styles.gameContainer}>
                 {
                     filteredGames ?

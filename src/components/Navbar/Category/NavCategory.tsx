@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { categories } from "@/data/categories";
-import styles from './Navbar.module.css'
+import styles from '../Navbar.module.css'
 
 function NavCategory() {
     const { category: selected_category } = useParams();

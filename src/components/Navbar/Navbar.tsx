@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import NavCategory from './NavCategory';
+import NavCategory from './Category/NavCategory';
 import Searchbar from '@/components/Searchbar/Searchbar';
 import styles from './Navbar.module.css'
 
