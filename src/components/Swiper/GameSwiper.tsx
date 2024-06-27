@@ -19,7 +19,7 @@ export default function GameSwiper({ games }: Props) {
                 navigation
                 spaceBetween={20}
                 slidesPerView={6}
-                autoplay={{ delay: 2000, pauseOnMouseEnter: true}}
+                // autoplay={{ delay: 2000, pauseOnMouseEnter: true}}
                 modules={[Autoplay, Scrollbar]}
                 loop
             >

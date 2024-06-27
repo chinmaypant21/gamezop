@@ -17,6 +17,15 @@
     width: 100%;
 }
 
+.category_wrapper{
+    overflow: scroll;
+}
+
+.category_wrapper::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
 #category_container{
     display: flex;
     gap: 1em;

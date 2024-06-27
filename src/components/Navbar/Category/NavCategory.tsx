@@ -9,27 +9,30 @@ function NavCategory() {
     const { category: selected_category } = useParams();
 
     return (
-        <ul id={styles.category_container}>
-            {
-                categories.map(category => {
-                    const isActive = category.id === selected_category;
+        <div className={styles.category_wrapper}>
+            <ul className="w-max" id={styles.category_container}>
+                {
+                    categories.map(category => {
+                        const isActive = category.id === selected_category;
 
-                    return (
-                        <li
-                            key={category.id}
-                            className={`
+                        return (
+                            <li
+                                key={category.id}
+                                className={`
                                 ${styles.nav_category} 
                                 ${isActive ? `${styles.nav_category_active}` : ''}
                             `}
-                        >
-                            <Link href={`/${category.id}`}>
-                                {category.name}
-                            </Link>
-                        </li>
-                    )
-                })
-            }
-        </ul>
+                            >
+                                <Link href={`/${category.id}`}>
+                                    {category.name}
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+
     )
 }
 

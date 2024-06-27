@@ -4,3 +4,27 @@
     column-gap: 20px;
     row-gap: 30px;
 }
+
+@media screen and (max-width:1200px) {
+    .gameContainer{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .gameContainer{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (max-width:650px) {
+    .gameContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .gameContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
