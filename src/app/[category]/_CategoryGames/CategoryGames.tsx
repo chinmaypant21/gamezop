@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { redirect, useParams } from "next/navigation";
 
 import { categories } from "@/data/categories";
@@ -12,35 +12,29 @@ import styles from '@/assets/game.module.css';
 
 export default function CategoryGames({ games }: any) {
     const { category } = useParams();
-    const [selectedCategory, setSelectedCategory] = useState<any>();
 
-    useEffect(() => {
-        const selected = categories.find((cat) => cat.id === category);
-
-        if(!selected){
-            redirect('/')
-        }
-
-        else{
-            setSelectedCategory(selected)
-        }
+    const selectedCategory = useMemo(() => {
+        return categories.find((cat) => cat.id === category);
     },[category])
 
+    if(!selectedCategory){
+        redirect('/')
+    }
 
-    const filteredGames = useMemo(() => (
-        games.filter((game: any) => (
+    const filteredGames = useMemo(() => {
+        return games.filter((game: any) => (
             game.categories.en.includes(selectedCategory?.value) ||
-            game.tags.en.includes(selectedCategory?.value))
-        )
-    ), [games]);
+            game.tags.en.includes(selectedCategory?.value)
+        ))
+    },[selectedCategory,games])
 
     return (
         <Container className='flex flex-col gap-3'>
             <div className="text-2xl text-primary capitalize font-bold">{selectedCategory?.name}</div>
             <div className={styles.gameContainer}>
                 {
-                    filteredGames ?
-                        games.map((game: any) => (
+                    filteredGames.length ?
+                        filteredGames.map((game: any) => (
                             <GameCard key={game.code} data={game} />
                         ))
 
