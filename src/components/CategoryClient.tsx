@@ -1,44 +1,29 @@
 'use client'
 
-import GameSection from "@/app/GameSection"
-import Container from "./Container"
+import { useMemo } from "react";
 import { useParams } from "next/navigation";
 
-const categories = [
-    {
-        name: 'Action',
-        id: 'action-games'
-    },
-    {
-        name: 'Adventure',
-        id: 'adventure-games'
-    },
-    {
-        name: 'Arcade',
-        id: 'arcade-games'
-    },
-    {
-        name: 'Puzzle & Logic',
-        id: 'puzle-and-logic-games'
-    },
-    {
-        name: 'Strategy',
-        id: 'strategy-games'
-    }
-]
+import GameSection from "@/app/GameSection"
+import { categories } from "@/data/categories";
+import Container from "./Container"
 
 export default function CategoryClient({ games }: any) {
-    const { category: selected_category } = useParams();
-    const category = categories.find((cat) => cat.id === selected_category);
+    const { category } = useParams();
 
-    const filteredGames = games.filter((game: any) =>
-        game.categories.en.includes(category?.name ?? '')
-    );
+    const selected_category = useMemo(() => categories.find((cat) => (
+        cat.id === category
+    )), [category])
 
+    const filteredGames = useMemo(() => (
+        games.filter((game: any) => (
+            game.categories.en.includes(selected_category?.value) ||
+            game.tags.en.includes(selected_category?.value))
+        )
+    ), [games]);
 
     return (
         <Container className='flex flex-col gap-3'>
-            <div className="text-2xl text-primary capitalize font-bold">{category?.name}</div>
+            <div className="text-2xl text-primary capitalize font-bold">{selected_category?.name}</div>
             <GameSection games={filteredGames} />
         </Container>
     )

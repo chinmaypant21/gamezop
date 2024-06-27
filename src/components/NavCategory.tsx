@@ -2,30 +2,7 @@
 
 import { useParams } from "next/navigation";
 import NavItem from "./NavItem";
-
-const categories = [
-    {
-        name: 'Action',
-        id: 'action-games'
-    },
-    {
-        name: 'Adventure',
-        id: 'adventure-games'
-    },
-    {
-        name: 'Arcade',
-        id: 'arcade-games'
-    },
-    {
-        name: 'Puzzle & Logic',
-        id: 'puzle-and-logic-games'
-    },
-    {
-        name: 'Strategy',
-        id: 'strategy-games'
-    }
-]
-
+import { categories } from "@/data/categories";
 
 function NavCategory() {
     const { category: selected_category } = useParams();
