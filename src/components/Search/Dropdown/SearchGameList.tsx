@@ -29,7 +29,7 @@ export default function SearchGameList({ data }: Props) {
                             </div>
                             <div className='flex flex-col gap-1 justify-center items-center ml-auto mr-2'>
                                 <Image src={RatingIcon} alt='Rating' height={25} width={25} />
-                                <span className='text-xs'>{game.rating}/5</span>
+                                <span className='text-xs'>{Number(game.rating).toFixed(1)}/5</span>
                             </div>
                         </Link>
                     </li>
