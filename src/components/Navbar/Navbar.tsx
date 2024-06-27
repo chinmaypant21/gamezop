@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import Search from '@/components/Search/Search';
 import NavCategory from './Category/NavCategory';
-import Searchbar from '@/components/Searchbar/Searchbar';
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -15,12 +15,13 @@ export default function Navbar() {
             <Image
               alt='logo'
               src={'https://static.gamezop.com/logo/gamezop-logo-dark.png'}
-              height={0} width={140}
+              height={0}
+              width={140}
             />
           </Link>
         </div>
         <NavCategory />
-        <Searchbar />
+        <Search />
       </nav>
     </header>
   );
