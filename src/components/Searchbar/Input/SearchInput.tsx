@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment,  useEffect,  useRef, useState } from "react"
+import { Fragment,  MouseEvent,  useEffect,  useRef, useState } from "react"
 import Image from "next/image";
 import useDebounce from "@/hooks/useDebounce";
 import SearchGameList from "./SearchGameList";
@@ -11,6 +11,10 @@ import SearchIcon from '@icons/search.png'
 import styles from './SearchInput.module.css'
 
 const MAX_RESULTS = 25;
+
+interface Props {
+    gameData: Game[]
+}
 
 const filterData = (value: any, gameData: any, setFilteredData: any) => {
     console.log('** Filtered data')
@@ -28,14 +32,13 @@ const filterData = (value: any, gameData: any, setFilteredData: any) => {
     setFilteredData(filtered.slice(0,MAX_RESULTS));
 }
 
-export default function SearchInput({ gameData }: any) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [value, setValue]   = useState('');
-    const [filteredData, setFilteredData] = useState<[] | null>([]);
+export default function SearchInput({ gameData }: Props) {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [value, setValue]   = useState<string>('');
+    const [filteredData, setFilteredData] = useState<Game[] | null>([]);
     const debouncedFilter = useDebounce(filterData,300)
 
-
-    const inputRef = useRef<any>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
     
     function handleClick(){
         setIsOpen(true);
@@ -49,7 +52,7 @@ export default function SearchInput({ gameData }: any) {
         }
     }
 
-    function handleClearInput(e: any){
+    function handleClearInput(e: MouseEvent<HTMLElement>){
         e.stopPropagation();
         setValue('');
         setIsOpen(false);
@@ -82,8 +85,6 @@ export default function SearchInput({ gameData }: any) {
             ? (
                 <Fragment>
                     <div className={styles.search_input_container}>
-
-                        {/* <div>start</div> */}
                         <input
                             ref={inputRef}
                             tabIndex={0}
@@ -113,12 +114,12 @@ export default function SearchInput({ gameData }: any) {
                         ) : null
                     }
                 </Fragment>
+            ) : (
+                <div className={styles.search_icon_container}>
+                    <Image src={SearchIcon} width={20} height={20} alt="Search" />
+                </div>
             )
-            : <div className={styles.search_icon_container}>
-                <Image src={SearchIcon} width={20} height={20} alt="Search" />
-            </div>
         }
-
         </div>
     )
 }

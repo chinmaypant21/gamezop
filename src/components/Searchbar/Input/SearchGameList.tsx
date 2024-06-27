@@ -1,20 +1,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from './SearchInput.module.css'
 
 import RatingIcon from '@icons/star.png'
+import styles from './SearchInput.module.css'
 
-export default function SearchGameList({ data }: any) {
+interface Props {
+    data: Game[]
+}
+
+export default function SearchGameList({ data }: Props) {
     if(!data.length) {
         return (
             <div className='flex justify-center items-center h-20 text-sm text-dim'>No search results</div>
         )
     }
 
+
     else return (
         <ul className={styles.result_game_list}>
             {
-                data.map((game: any) => (
+                data.map((game) => (
                     <li key={game.code} className={styles.search_list_item}>
                         <Link href={game.url} className='flex gap-4'>
                             <Image alt='Game thumbnail' width={50} height={50} src={game.assets.thumb} />

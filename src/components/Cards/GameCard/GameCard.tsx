@@ -5,7 +5,11 @@ import FavIcon from '@icons/favourite_grey.svg'
 import FavSelectIcon from '@icons/favourite_red.svg'
 import InfoIcon from '@icons/info_icon.png'
 
-export default function GameCard({ data }: any) {
+interface Props {
+    data: Game
+}
+
+export default function GameCard({ data }: Props) {
     return (
         <div className="relative">
             <button aria-label="Favourite" className="favourite-btn">

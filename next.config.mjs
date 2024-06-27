@@ -6,8 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const withPWA = nextPWA({
     dest: "public",
-    // disable: true,
-    // disable: process.env.NODE_ENV === "development",
+    disable: process.env.NODE_ENV === "development",
     register: true,
     skipWaiting: true,
 });

@@ -1,6 +1,4 @@
 import { fetchGames } from "@/lib/api";
-
-// Styles
 import SearchInput from "./Input/SearchInput";
 
 export default async function SearchBar() {

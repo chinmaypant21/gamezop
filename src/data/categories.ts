@@ -1,4 +1,4 @@
-export const categories : Array<{id: string, name: string, value: string}> = [
+export const categories : Category[] = [
     {
         id: 'action-games',
         name: 'Action',

@@ -11,7 +11,7 @@ function NavCategory() {
     return (
         <ul id={styles.category_container}>
             {
-                categories.map((category: any) => {
+                categories.map(category => {
                     const isActive = category.id === selected_category;
 
                     return (
