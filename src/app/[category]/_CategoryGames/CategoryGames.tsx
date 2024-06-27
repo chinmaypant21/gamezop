@@ -5,7 +5,7 @@ import { redirect, useParams } from "next/navigation";
 
 import { categories } from "@/data/categories";
 import Container from "@/components/Container/Container";
-import GameCard from "@/components/Cards/GameCard/GameCard";
+import GameCard from "@/components/GameCard/GameCard";
 
 // Styles
 import styles from './Games.module.css';

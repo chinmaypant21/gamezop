@@ -1,9 +1,10 @@
 'use client'
 
-import { Fragment,  MouseEvent,  useEffect,  useRef, useState } from "react"
+import { Fragment, MouseEvent, Suspense, lazy, useEffect, useRef, useState } from "react"
 import Image from "next/image";
 import useDebounce from "@/hooks/useDebounce";
-import SearchGameList from "../Dropdown/SearchGameList";
+import Loading from "@/components/Loading/Loading";
+const SearchGameList = lazy(() => import('../Dropdown/SearchGameList'))
 
 import CrossIcon from '@icons/cross.svg'
 import SearchIcon from '@icons/search.png'
@@ -109,7 +110,9 @@ export default function SearchInput({ gameData }: Props) {
                     {
                         filteredData ? (
                         <div className={styles.search_result_menu}>
-                            <SearchGameList data={filteredData} />
+                            <Suspense fallback={<Loading />}>
+                                <SearchGameList data={filteredData} />
+                            </Suspense>
                         </div>
                         ) : null
                     }
