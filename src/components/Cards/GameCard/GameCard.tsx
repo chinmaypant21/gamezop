@@ -5,6 +5,8 @@ import FavIcon from '@icons/favourite_grey.svg'
 import FavSelectIcon from '@icons/favourite_red.svg'
 import InfoIcon from '@icons/info_icon.png'
 
+import styles from './GameCard.module.css';
+
 interface Props {
     data: Game
 }
@@ -12,22 +14,22 @@ interface Props {
 export default function GameCard({ data }: Props) {
     return (
         <div className="relative">
-            <button aria-label="Favourite" className="favourite-btn">
-                <Image src={FavIcon} alt="Favourite" height={30} width={30} className="favourite-img" />
+            <button aria-label="Favourite" className={styles.favourite_btn}>
+                <Image src={FavIcon} alt="Favourite" height={30} width={30} />
                 {/* <Image src={'/icons/favourite_red.svg'} alt="Favourite Selected" height={30} width={30} /> */}
             </button>
-            <div className="info-container">
-                <button aria-label="Info" className="info-btn">
-                    <Image src={InfoIcon} alt="Info Icon" height={30} width={30} className="info-img" />
+            <div className={styles.info_container}>
+                <button aria-label="Info">
+                    <Image src={InfoIcon} alt="Info Icon" height={30} width={30} />
                 </button>
 
-                <div className="xyz">
-                    <h5 className="info_heading">{data.name.en}</h5>
-                    <div className="info_description">{data.description.en}</div>
-                    <div className="info_gameplay text-sm mt-1"><b>Gameplays:</b> {data.gamePlays}</div>
+                <div className={styles.info_popup}>
+                    <h5 className={styles.info_heading}>{data.name.en}</h5>
+                    <div className={styles.info_description}>{data.description.en}</div>
+                    <div className="text-sm mt-1"><b>Gameplays:</b> {data.gamePlays}</div>
                     {
                         data.gamePreviews.en ? (
-                            <div className="info_game_preview text-sm italic text-blue-500">
+                            <div className='text-sm italic text-blue-400'>
                                 <a target="_blank" href={data.gamePreviews.en}>Watch preview</a>
                             </div>
                         )

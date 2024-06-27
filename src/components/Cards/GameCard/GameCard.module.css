@@ -1,0 +1,52 @@
+.favourite_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 0.2s ease;
+}
+
+.info_container {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+
+.favourite_btn:hover {
+    scale: 1.2;
+}
+
+/* Magic Popup */
+
+.info_popup {
+    position: absolute;
+    right: 0;
+    background-color: color-mix(in srgb, var(--app-sec-color) 80%, transparent);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    overflow: hidden;
+
+    color: var(--app-text-color);
+    box-shadow: 0 2px 13px rgba(0, 0, 0, .095);
+    z-index: 5;
+    top: 100%;
+
+    padding: 10px;
+    width: max-content;
+    max-width: 300px;
+    scale: 0;
+    transition: scale 0.3s ease;
+    transform-origin: top right;
+}
+
+.info_container:hover .info_popup {
+    scale: 1;
+}
+
+.info_heading {
+    font-weight: 600;
+}
+
+.info_description {
+    font-size: 0.8em;
+    padding-block: 0.3em;
+}

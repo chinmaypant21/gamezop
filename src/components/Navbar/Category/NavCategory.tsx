@@ -15,7 +15,7 @@ function NavCategory() {
                     const isActive = category.id === selected_category;
 
                     return (
-                        <li 
+                        <li
                             key={category.id}
                             className={`
                                 ${styles.nav_category} 
