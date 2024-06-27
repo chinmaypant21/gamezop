@@ -1,7 +1,6 @@
-import { GetServerSideProps } from "next";
-import GameSection from "./GameSection";
 import Container from '@/components/Container'
 import styles from '@/assets/page.module.css'
+import GameSection from '@/components/GameSection';
 
 export default async function Home() {
   const response = await fetch('https://pub.gamezop.com/v3/games?id=peSLSV');

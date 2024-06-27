@@ -3,9 +3,9 @@
 import { useMemo } from "react";
 import { useParams } from "next/navigation";
 
-import GameSection from "@/app/GameSection"
 import { categories } from "@/data/categories";
 import Container from "./Container"
+import GameSection from "./GameSection";
 
 export default function CategoryClient({ games }: any) {
     const { category } = useParams();

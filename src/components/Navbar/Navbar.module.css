@@ -9,7 +9,7 @@
     height: 75px;
 }
 
-.nav-container{
+.nav_container{
     display: flex;
     align-items: center;
     max-width: 1300px;

@@ -1,19 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Searchbar from './Searchbar';
 
-import '@/assets/header.css'
 import NavCategory from './NavCategory';
-import { SearchGames } from './SearchGames';
+import Searchbar from '@/components/Searchbar/Searchbar';
+import styles from './Navbar.module.css'
 
 export default function Navbar() {
 
   return (
-    <header className='text-primary' id='header'>
-      <div className='nav-container'>
+    <header className='text-primary' id={styles.header}>
+      <nav className={styles.nav_container}>
         <div className='mr-6'>
           <Link href={'/'} className='h-full w-full'>
-            <Image 
+            <Image
               alt='logo'
               src={'https://static.gamezop.com/logo/gamezop-logo-dark.png'}
               height={0} width={140}
@@ -21,8 +20,8 @@ export default function Navbar() {
           </Link>
         </div>
         <NavCategory />
-        <SearchGames />
-      </div>
+        <Searchbar />
+      </nav>
     </header>
   );
 };
