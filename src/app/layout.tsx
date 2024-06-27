@@ -9,6 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   manifest : "/manifest.json",
+  title: 'Gamezop | Chinmay',
+  description: 'This is a website inspired from Gamezop.com'
 }
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
