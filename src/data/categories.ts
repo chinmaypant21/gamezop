@@ -28,6 +28,5 @@ export const categories : Category[] = [
         id: 'featured-games',
         name: 'Featured',
         value: 'Featured'
-        
     }
 ]

@@ -32,14 +32,8 @@
 
 body {
   background-color: var(--app-bg-color);
-  /* color: rgb(var(--foreground-rgb)); */
+  color: var(--app-text-color);
 }
-
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
 
 .page-wrapper{
   margin: 0 auto;
@@ -49,6 +43,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+  /* height: 0; */
 }
 
 ::-webkit-scrollbar-thumb{

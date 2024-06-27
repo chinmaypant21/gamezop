@@ -1,6 +1,7 @@
 .game_card{
     position: relative;
     margin-bottom: 25px;
+    height: 200px;
 }
 
 .name{
