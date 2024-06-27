@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import FavIcon from '@icons/favourite_grey.svg'
-import FavSelectIcon from '@icons/favourite_red.svg'
 import InfoIcon from '@icons/info_icon.png'
 
 import styles from './GameCard.module.css';
+import FavouriteBtn from "@/components/Buttons/FavouriteBtn/FavouriteBtn";
 
 interface Props {
     data: Game
@@ -14,10 +13,7 @@ interface Props {
 export default function GameCard({ data }: Props) {
     return (
         <div className="relative">
-            <button aria-label="Favourite" className={styles.favourite_btn}>
-                <Image src={FavIcon} alt="Favourite" height={30} width={30} />
-                {/* <Image src={'/icons/favourite_red.svg'} alt="Favourite Selected" height={30} width={30} /> */}
-            </button>
+            <FavouriteBtn />
             <div className={styles.info_container}>
                 <button aria-label="Info">
                     <Image src={InfoIcon} alt="Info Icon" height={30} width={30} />
