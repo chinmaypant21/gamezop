@@ -15,8 +15,7 @@ interface Params {
     }
 }
 
-async function CategoryPage({ category }: any) {
-    console.log('[+] Fetched in Category Page')
+async function CategoryPage({ category }: {category: string}) {
     const games = await fetchGames();
 
     const selectedCategory = categories.find(cat => cat.id === category)

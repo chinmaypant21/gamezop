@@ -13,10 +13,9 @@ import NextIcon from '@icons/next.svg'
 const categoryList = ['featured-games','action-games','adventure-games','strategy-games']
 
 export default async function Home() {
-  console.log('[+] Fetch in Home')
   const games = await fetchGames();
 
-  const categorized_games: any = getGamesByCategory(games, categoryList, 20);
+  const categorized_games = getGamesByCategory(games, categoryList, 20);
 
   return (
     <main className={`flex flex-col gap-6 items-center justify-between py-4 page-wrapper`}>

@@ -26,7 +26,6 @@ export default function GameCard({ data, hideInfo }: Props) {
             </div>
             <div className={`text-primary font-bold text-lg text-center pt-2 ${styles.name}`}>
                 {data.name.en}
-                {/* <h3 className="text-primary font-bold text-lg text-center pt-2">{data.name.en}</h3> */}
             </div>
         </div>
     )

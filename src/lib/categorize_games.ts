@@ -2,7 +2,6 @@ import { categories } from "@/data/categories";
 
 
 export function getGamesByCategory(games: Game[], category_list: string[], count: number) {
-    console.log('Categorize games');
     const filteredCategories = categories.filter(category => category_list.includes(category.id));
   
     const categoriesWithGames = filteredCategories.map(category => {

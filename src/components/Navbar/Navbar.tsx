@@ -8,7 +8,6 @@ import NavCategory from './Category/NavCategory';
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
-
   return (
     <header className='text-primary' id={styles.header}>
       <nav className={styles.nav_container}>

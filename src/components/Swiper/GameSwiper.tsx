@@ -17,7 +17,6 @@ export default function GameSwiper({ games }: Props) {
             <Swiper
                 className={styles.game_section}
                 navigation
-                // spaceBetween={20}
                 slidesPerView={6}
                 breakpoints={{
                     300: {
@@ -35,7 +34,6 @@ export default function GameSwiper({ games }: Props) {
                 }}
                 autoplay={{ delay: 2000, pauseOnMouseEnter: true}}
                 modules={[Autoplay, Scrollbar]}
-                // loop
             >
             {
                 games.map(game => (

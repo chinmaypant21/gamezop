@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import useDebounce from "@/hooks/useDebounce";
 import Loading from "@/components/Loading/Loading";
+import filterSearch from "@/lib/filter_search_data";
 const SearchGameList = lazy(() => import('../Dropdown/SearchGameList'))
 
 import CrossIcon from '@icons/cross.svg'
@@ -12,33 +13,17 @@ import SearchIcon from '@icons/search_dark.svg'
 
 import styles from '../Search.module.css'
 
-const MAX_RESULTS = 25;
 
 interface Props {
     gameData: Game[]
-}
-
-const filterData = (value: any, gameData: any, setFilteredData: any) => {
-    console.log('** Filtered data')
-
-    const filtered = gameData.filter((game: any) => {
-        const query = value.toLowerCase();
-
-        return (
-            game.name.en.toLowerCase().includes(query) ||
-            game.description.en.toLowerCase().includes(query) ||
-            game.tags.en.some((tag: any) => tag.toLowerCase().includes(query))
-        )
-    });
-
-    setFilteredData(filtered.slice(0,MAX_RESULTS));
 }
 
 export default function SearchInput({ gameData }: Props) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [value, setValue]   = useState<string>('');
     const [filteredData, setFilteredData] = useState<Game[] | null>([]);
-    const debouncedFilter = useDebounce(filterData,300)
+
+    const debouncedFilter = useDebounce(filterSearch,300)
 
     const inputRef = useRef<HTMLInputElement>(null);
     
