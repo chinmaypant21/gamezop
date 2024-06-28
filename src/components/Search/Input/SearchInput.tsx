@@ -58,7 +58,7 @@ export default function SearchInput({ gameData }: Props) {
         }
 
         debouncedFilter(value, gameData, setFilteredData);
-    }, [value])
+    }, [value, gameData])
 
     return (
         <div
