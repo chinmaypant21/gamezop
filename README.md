@@ -49,9 +49,20 @@ The styling journey for this project was aimed at achieving a visually appealing
 
 ## Custom Info Button
 As part of enhancing the user experience, I implemented a **custom info button** for the game card. This feature provides users with quick access to game details on *hover*, making the interface more interactive and informative.
+
 ![image](https://github.com/chinmaypant21/gamezop/assets/64401853/67c2e8c5-a9e6-46cd-9421-d003ccddba6f)
 
-## PageSpeed Ratings
+## Lighthouse Ratings
+### Mobile
+
+![image](https://github.com/chinmaypant21/gamezop/assets/64401853/0b136919-6b4f-4cb1-b83e-6156314a33df)
+
+### Desktop
+
+![image](https://github.com/chinmaypant21/gamezop/assets/64401853/8295b845-39a0-498d-8c2c-dae526a20eaa)
+
+
+
 
 ## Steps to Run Locally
 
