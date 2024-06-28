@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
 import { Suspense } from 'react';
+
 import Search from '@/components/Search/Search';
 import NavCategory from './Category/NavCategory';
 
@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className='text-primary' id={styles.header}>
       <nav className={styles.nav_container}>
-        <div className='mr-6'>
+        <div className={styles.logo_container}>
           <Link href={'/'} className='h-full w-full'>
             <Image
               alt='logo'

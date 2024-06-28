@@ -60,14 +60,36 @@ body {
 
 @media screen and (max-width: 1330px) {
   .page-wrapper{
-    padding-inline: 12px;
+    margin-top: 10px;
+    padding-inline: 10px;
   }
 }
 
 @media screen and (max-width:660px) {
+
+  .page-wrapper{
+    padding-inline: 2px;
+  }
+
   .responsive-category-container{
     border: none;
     background-color: transparent;
-    padding: 0 10px;
+    padding: 0 2px;
   }
+
+  .category-title-container{
+    padding-inline: 5px;
+    font-size: 1.2em;
+
+    .next-title{
+      font-size: 0.6em;
+    }
+    .next-img{
+      width: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
 }

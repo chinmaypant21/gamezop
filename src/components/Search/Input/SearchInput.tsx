@@ -2,6 +2,7 @@
 
 import { Fragment, MouseEvent, Suspense, lazy, useEffect, useRef, useState } from "react"
 import Image from "next/image";
+
 import useDebounce from "@/hooks/useDebounce";
 import Loading from "@/components/Loading/Loading";
 const SearchGameList = lazy(() => import('../Dropdown/SearchGameList'))
@@ -77,6 +78,7 @@ export default function SearchInput({ gameData }: Props) {
     return (
         <div
             className="cursor-pointer ml-auto relative"
+            style={{gridArea:'search'}}
             tabIndex={0}
             onBlur={handleBlur}
             onClick={handleClick}

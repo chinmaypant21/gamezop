@@ -11,7 +11,7 @@ function NavCategory() {
 
     return (
         <div className={styles.category_wrapper}>
-            <ul className="w-max" id={styles.category_container}>
+            <ul className={styles.category_container}>
                 {
                     categories.map(category => {
                         const isActive = category.id === selected_category;
@@ -19,8 +19,9 @@ function NavCategory() {
                         return (
                             <li
                                 key={category.id}
-                                className={`${styles.nav_category} ${isActive ? `${styles.nav_category_active}` : ''}
-                            `}
+                                className={
+                                    `${styles.nav_category} ${isActive ? `${styles.nav_category_active}` : ''}`
+                                }
                             >
                                 <Link href={`/${category.id}`}>
                                     {category.name}

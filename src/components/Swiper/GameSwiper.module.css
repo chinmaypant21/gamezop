@@ -2,3 +2,15 @@
     max-width: 185px;
     margin-right: 20px;
 }
+
+@media screen and (max-width:660px) {
+    .card_wrapper{
+        margin-right: 12px;    
+    }
+}
+
+@media screen and (max-width:500px) {
+    .card_wrapper{
+        margin-right: 8px;
+    }
+}
