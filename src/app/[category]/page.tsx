@@ -32,7 +32,7 @@ async function CategoryPage({ category }: any) {
 
     return (
         <main className="flex flex-col items-center justify-between py-4 page-wrapper">
-            <Container className='flex flex-col gap-3'>
+            <Container className='flex flex-col gap-3 responsive-category-container'>
                 <div className="text-2xl text-primary capitalize font-bold">{selectedCategory.name}</div>
                 {
                     filteredGames.length ? (

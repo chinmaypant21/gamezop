@@ -20,7 +20,7 @@ export default async function Home() {
     <main className={`flex flex-col gap-6 items-center justify-between py-4 page-wrapper`}>
     {
       categorized_games.map((category: any) => (
-        <Container key={category.id} className='flex flex-col gap-3 w-full'>
+        <Container key={category.id} className='flex flex-col gap-3 w-full responsive-category-container'>
           <div className='flex justify-between'>
             <div className="text-2xl text-primary capitalize font-bold">{category.name}</div>
             <Link href={`/${category.id}`} className='flex items-center gap-2'>

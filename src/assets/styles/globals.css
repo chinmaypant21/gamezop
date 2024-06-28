@@ -63,3 +63,11 @@ body {
     padding-inline: 12px;
   }
 }
+
+@media screen and (max-width:660px) {
+  .responsive-category-container{
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+  }
+}
