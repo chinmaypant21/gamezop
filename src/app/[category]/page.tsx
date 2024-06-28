@@ -1,8 +1,9 @@
 import { redirect } from 'next/navigation'
 
+import { fetchGames } from '@/lib/api';
+import { categories } from "@/data/categories";
 import Container from '@/components/Container/Container';
 import GameCard from '@/components/GameCard/GameCard';
-import { categories } from "@/data/categories";
 
 import styles from './Category.module.css';
 
@@ -14,11 +15,8 @@ interface Params {
 
 export default async function CategoryPage({ params }: Params) {
     console.log('[+] Fetched in Category Page')
-    const response = await fetch('https://pub.gamezop.com/v3/games?id=peSLSV', {
-        next: { revalidate: 60 } //Revalidate data every 60 seconds to prevent unnecessary API calls (ISR)
-    });
+    const games = await fetchGames();
 
-    const { games }: { games: Game[] } = await response.json();
     const selectedCategory = categories.find(cat => cat.id === params.category)
 
     if (!selectedCategory) {
