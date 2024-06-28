@@ -1,7 +1,7 @@
 {
     "name": "Gamezop Web App",
     "short_name": "Gamezop",
-    "description": "",
+    "description": "This is a website inspired from Gamezop.com. Created by Chinmay",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
