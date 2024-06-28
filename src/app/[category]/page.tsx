@@ -35,7 +35,7 @@ export default async function CategoryPage({ params }: Params) {
             <Container className='flex flex-col gap-3'>
                 <div className="text-2xl text-primary capitalize font-bold">{selectedCategory.name}</div>
                 {
-                    !filteredGames.length ? (
+                    filteredGames.length ? (
                         <div className={styles.gameContainer}>
                             {
                                 filteredGames.map(game => (
