@@ -53,15 +53,18 @@ As part of enhancing the user experience, I implemented a **custom info button**
 ![image](https://github.com/chinmaypant21/gamezop/assets/64401853/67c2e8c5-a9e6-46cd-9421-d003ccddba6f)
 
 ## Lighthouse Ratings
-### Mobile
+#### Mobile
 
 ![image](https://github.com/chinmaypant21/gamezop/assets/64401853/0b136919-6b4f-4cb1-b83e-6156314a33df)
 
-### Desktop
+#### Desktop
 
 ![image](https://github.com/chinmaypant21/gamezop/assets/64401853/8295b845-39a0-498d-8c2c-dae526a20eaa)
 
 
+## PWA
+
+![image](https://github.com/chinmaypant21/gamezop/assets/64401853/2bbe8c27-87cc-4da4-a4a4-3b2852635fbb)
 
 
 ## Steps to Run Locally
