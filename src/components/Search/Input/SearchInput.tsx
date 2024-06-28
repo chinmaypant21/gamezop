@@ -34,8 +34,8 @@ export default function SearchInput({ gameData }: Props) {
 
     function handleBlur(e: any){
         if (!e.currentTarget.contains(e.relatedTarget)) {
-            setValue('');
-            setIsOpen(false);
+            // setValue('');
+            // setIsOpen(false);
         }
     }
 

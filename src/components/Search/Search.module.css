@@ -15,6 +15,7 @@
     box-sizing: content-box;
     background-color: var(--app-input-bg-color);
     border: 1px solid var(--app-border-main-color);
+    box-shadow: 0px 0px 8px 3px #00000054;
     padding: 0px 8px 0px 15px;
     border-radius: 50px;
     width: 250px;
@@ -76,5 +77,12 @@
 
     .search_result_menu{
         top: 100%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .search_result_menu{
+        min-width: unset;
+        width: 90vw;
     }
 }

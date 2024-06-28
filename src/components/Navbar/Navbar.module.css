@@ -31,7 +31,7 @@
 
 .category_wrapper{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     grid-area: category;
     overflow: scroll;
 }
