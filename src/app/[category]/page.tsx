@@ -1,7 +1,9 @@
 import { redirect } from 'next/navigation'
 
+import { Suspense } from 'react';
 import { fetchGames } from '@/lib/api';
 import { categories } from "@/data/categories";
+import Loading from '@/components/Loading/Loading';
 import Container from '@/components/Container/Container';
 import GameCard from '@/components/GameCard/GameCard';
 
@@ -13,11 +15,11 @@ interface Params {
     }
 }
 
-export default async function CategoryPage({ params }: Params) {
+async function CategoryPage({ category }: any) {
     console.log('[+] Fetched in Category Page')
     const games = await fetchGames();
 
-    const selectedCategory = categories.find(cat => cat.id === params.category)
+    const selectedCategory = categories.find(cat => cat.id === category)
 
     if (!selectedCategory) {
         redirect('/')
@@ -47,4 +49,12 @@ export default async function CategoryPage({ params }: Params) {
             </Container>
         </main>
     );
+}
+
+export default function Page({ params }: Params){
+    return (
+        <Suspense fallback={<Loading />}>
+            <CategoryPage category={params.category} />
+        </Suspense>
+    )
 }

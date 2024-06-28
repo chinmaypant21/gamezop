@@ -1,6 +1,6 @@
 function Loading() {
   return (
-    <div className=" text-primary">Loading</div>
+    <div className="w-full h-full text-primary font-bold text-center  ">Loading</div>
   )
 }
 

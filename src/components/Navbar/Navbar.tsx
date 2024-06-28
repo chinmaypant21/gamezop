@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { Suspense } from 'react';
 import Search from '@/components/Search/Search';
 import NavCategory from './Category/NavCategory';
+
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -21,7 +23,9 @@ export default function Navbar() {
           </Link>
         </div>
         <NavCategory />
-        <Search />
+        <Suspense>
+          <Search />
+        </Suspense>
       </nav>
     </header>
   );

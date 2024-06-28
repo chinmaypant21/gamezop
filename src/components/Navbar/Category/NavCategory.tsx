@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { categories } from "@/data/categories";
+
 import styles from '../Navbar.module.css'
 
 function NavCategory() {
@@ -18,9 +19,7 @@ function NavCategory() {
                         return (
                             <li
                                 key={category.id}
-                                className={`
-                                ${styles.nav_category} 
-                                ${isActive ? `${styles.nav_category_active}` : ''}
+                                className={`${styles.nav_category} ${isActive ? `${styles.nav_category_active}` : ''}
                             `}
                             >
                                 <Link href={`/${category.id}`}>
