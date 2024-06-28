@@ -7,15 +7,19 @@ import InfoBtn from "@/components/Buttons/InfoBtn/InfoBtn";
 import styles from './GameCard.module.css'
 
 interface Props {
-    data: Game
+    data: Game,
+    hideInfo?: boolean
 }
 
-export default function GameCard({ data }: Props) {
+export default function GameCard({ data, hideInfo }: Props) {
     return (
         <div className={styles.game_card}>
             <div className="relative">
                 <FavouriteBtn />
-                <InfoBtn data={data} />
+                {
+                    !hideInfo &&
+                    <InfoBtn data={data} />
+                }
                 <Link target="_blank" href={data.url}>
                     <Image alt="Game Image" src={data.assets.square} height={190} width={190} className="rounded-2xl w-full" />
                 </Link>

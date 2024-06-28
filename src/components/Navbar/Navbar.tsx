@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className='text-primary' id={styles.header}>
       <nav className={styles.nav_container}>
         <div className={styles.logo_container}>
-          <Link href={'/'} className='h-full w-full'>
+          <Link href={'/'} className='w-full'>
             <Image
               alt='logo'
               src={'https://static.gamezop.com/logo/gamezop-logo-dark.png'}

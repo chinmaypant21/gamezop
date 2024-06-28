@@ -8,7 +8,7 @@ import Loading from "@/components/Loading/Loading";
 const SearchGameList = lazy(() => import('../Dropdown/SearchGameList'))
 
 import CrossIcon from '@icons/cross.svg'
-import SearchIcon from '@icons/search.png'
+import SearchIcon from '@icons/search_dark.svg'
 
 import styles from '../Search.module.css'
 
@@ -77,7 +77,7 @@ export default function SearchInput({ gameData }: Props) {
 
     return (
         <div
-            className="cursor-pointer ml-auto relative"
+            className="cursor-pointer ml-auto relative h-full"
             style={{gridArea:'search'}}
             tabIndex={0}
             onBlur={handleBlur}

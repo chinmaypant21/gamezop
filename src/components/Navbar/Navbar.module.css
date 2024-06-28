@@ -11,8 +11,11 @@
 }
 
 .logo_container{
+    display: flex;
+    align-items: center;
     margin-right: 12px;
     min-width: 120px;
+    height: 40px;
     grid-area: logo;
 }
 
@@ -27,6 +30,8 @@
 }
 
 .category_wrapper{
+    display: flex;
+    justify-content: center;
     grid-area: category;
     overflow: scroll;
 }
@@ -77,7 +82,7 @@
     #header{
         padding-block: 10px;
     }
-    
+
     .nav_container{
         display: grid;
         row-gap: 14px;

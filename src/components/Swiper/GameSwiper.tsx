@@ -22,29 +22,25 @@ export default function GameSwiper({ games }: Props) {
                 breakpoints={{
                     300: {
                         slidesPerView: 2.2,
-                        // spaceBetween:8
                     },
                     500: {
                         slidesPerView: 3.2,
-                        // spaceBetween: 12
                     },
                     640: {
-                        slidesPerView: 4.2,
-                        // spaceBetween: 16
+                        slidesPerView: 4.5,
                     },
                     1024: {
-                        slidesPerView: 5.2,
-                        // spaceBetween: 20
+                        slidesPerView: 5.5,
                     }
                 }}
-                // autoplay={{ delay: 2000, pauseOnMouseEnter: true}}
+                autoplay={{ delay: 2000, pauseOnMouseEnter: true}}
                 modules={[Autoplay, Scrollbar]}
                 // loop
             >
             {
                 games.map(game => (
                     <SwiperSlide key={game.code} className={styles.card_wrapper}>
-                        <GameCard data={game} />
+                        <GameCard data={game} hideInfo />
                     </SwiperSlide>
                 ))
             }
